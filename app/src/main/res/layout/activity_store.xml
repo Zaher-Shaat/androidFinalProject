@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Store">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/store_clothes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomappbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:fabCradleMargin="14dp"
+        android:backgroundTint="@color/color"
+        app:fabCradleRoundedCornerRadius="60dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_f"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/add"
+            android:layout_gravity="bottom|left"
+            android:layout_margin="12dp"
+            app:backgroundTint="@color/font"
+            app:layout_anchor="@+id/bottomappbar"
+            app:maxImageSize="50dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/signOutBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/signout"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="12dp"
+            app:layout_anchor="@+id/bottomappbar"
+            app:maxImageSize="50dp" />
+        <!--        <Button-->
+        <!--            android:id="@+id/signOutBtn"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_margin="15dp"-->
+        <!--            android:gravity="bottom|center"-->
+        <!--            android:outlineSpotShadowColor="@color/black"-->
+        <!--            android:shadowColor="@color/black"-->
+        <!--            android:text="SignOut"-->
+        <!--            android:textAllCaps="false"-->
+
+        <!--            />-->
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

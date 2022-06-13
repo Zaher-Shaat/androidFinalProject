@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">malabisi</string>
+    <string name="FullName">Full Name</string>
+    <string name="Email">Email Address</string>
+    <string name="Password">Password </string>
+    <string name="SIGNUP"> SIGNUP</string>
+    <string name="account"> You have account?Login</string>
+    <string name="accounts">Dont have account ?Sign up</string>
+    <string name="user">Login as a user</string>
+    <string name="admin">Login admin</string>
+    <string name="code">code</string>
+    <string name="price">price</string>
+    <string name="Text"></string>
+</resources>
