@@ -1,5 +1,6 @@
 package com.example.malabsiadmin;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -29,6 +30,7 @@ public class Store extends AppCompatActivity {
     FloatingActionButton btn_f, signOutBtn;
     ArrayList<com.example.malabsiadmin.item> items = new ArrayList<>();
     private RecyclerView store_clothes;
+    clothesAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,11 +77,18 @@ public class Store extends AppCompatActivity {
                     for (DataSnapshot snap : data) {
                         item i = snap.getValue(item.class);
                         items.add(i);
-
                     }
-                    clothesAdapter adapter = new clothesAdapter(items);
+                    adapter = new clothesAdapter(items, new ClothesClickListner() {
+                        @Override
+                        public void onDeleteListiner(item i) {
+                            ref.child(i.getId()).setValue(null);
+                            items.remove(i);
+                            //
+                            adapter.notifyDataSetChanged();
+                        }
+                    });
                     store_clothes.setAdapter(adapter);
-
+//
 
                 } else {
                     String error = task.getException().getMessage();
